@@ -16,3 +16,19 @@ function toggleContent(id) {
     box.style.display = "block";
   }
 }
+if (id === "c1") {
+    playAudio();
+  }
+}
+
+// === AUDIO (otomatis loop) ===
+const audio = new Audio("lagu.mp3");
+audio.loop = true;
+audio.volume = 1.0;
+
+// === FUNGSI PLAY AUDIO ===
+function playAudio() {
+  audio.play().catch(err => {
+    console.log("Audio belum bisa diputar:", err);
+  });
+}
