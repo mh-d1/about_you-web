@@ -1,41 +1,22 @@
-// === AUDIO (HARUS dibuat setelah klik, agar HP mengizinkan) ===
-let audioStarted = false;
-let audio; 
+// Audio setup
+let audioC1 = new Audio("opium.mp3.mp3"); // pastikan file ada di folder yang sama
+let c1Open = false;
 
-function startAudio() {
-  if (!audioStarted) {
-    audio = new Audio("opium.mp3.mp3");   // Pastikan nama file sama
-    audio.loop = true;               // Ulang otomatis
-    audio.play().catch(e => console.log("Audio gagal play:", e));
-    audioStarted = true;
-  }
-}
+function toggleC1() {
+  const c1 = document.getElementById("c1");
 
-// === FUNGSI KONTEN ===
-function toggleContent(id) {
-  const box = document.getElementById(id);
+  if (!c1) return;
 
-  if (!box) return;
-
-  if (box.style.display === "block") {
-    box.style.display = "none";
+  if (c1Open) {
+    // tutup teks + stop audio
+    c1.style.display = "none";
+    audioC1.pause();
+    audioC1.currentTime = 0; // reset
+    c1Open = false;
   } else {
-    box.style.display = "block";
-
-    // PLAY AUDIO hanya untuk tombol pertama (c1)
-    if (id === "c1") {
-      startAudio();
-    }if (box.style.display === "block") {
-  // tutup konten
-  if (id === "c1") {
-    audio.pause().catch(...);           // hentikan audio
-    audio.currentTime = 0;   // reset ke awal
-  }
-} else {
-  // buka konten
-  if (id === "c1") {
-    audio.play().catch(...); // play audio
-  }
-    }
+    // buka teks + play audio
+    c1.style.display = "block";
+    audioC1.play().catch(err => console.log("Audio gagal play:", err));
+    c1Open = true;
   }
 }
