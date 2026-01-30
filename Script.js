@@ -22,7 +22,7 @@ if (id === "c1") {
 }
 
 // === AUDIO (otomatis loop) ===
-const audio = new Audio("lagu.mp3");
+const audio = new Audio("opium.mp3.mp3");
 audio.loop = true;
 audio.volume = 1.0;
 
