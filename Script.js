@@ -16,19 +16,36 @@ function toggleContent(id) {
     box.style.display = "block";
   }
 }
-if (id === "c1") {
-    playAudio();
+// === AUDIO SETUP ===
+let audio = null;
+
+function playAudio() {
+  if (!audio) {
+    audio = new Audio("opium.mp3.mp3"); // pastikan nama file benar!
+    audio.loop = true;             // otomatis ulang
   }
+
+  // play hanya setelah klik pertama
+  audio.play().catch(err => console.log("Audio gagal play:", err));
 }
 
-// === AUDIO (otomatis loop) ===
-const audio = new Audio("opium.mp3.mp3");
-audio.loop = true;
-audio.volume = 1.0;
+// === FUNGSI BUKA/TUTUP KONTEN ===
+function toggleContent(id) {
+  const box = document.getElementById(id);
 
-// === FUNGSI PLAY AUDIO ===
-function playAudio() {
-  audio.play().catch(err => {
-    console.log("Audio belum bisa diputar:", err);
-  });
+  if (!box) {
+    console.error("ID tidak ditemukan:", id);
+    return;
+  }
+
+  if (box.style.display === "block") {
+    box.style.display = "none";
+  } else {
+    box.style.display = "block";
+
+    // PLAY AUDIO HANYA UNTUK BUTTON PERTAMA (c1)
+    if (id === "c1") {
+      playAudio();
+    }
+  }
 }
