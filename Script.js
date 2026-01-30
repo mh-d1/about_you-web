@@ -15,12 +15,7 @@ function startAudio() {
 function toggleContent(id) {
   const box = document.getElementById(id);
 
-  if (!box) return;
-
-  if (box.style.display === "block") {
-    box.style.display = "none";
-  } else {
-    box.style.display = "block";
+  
 
     // PLAY AUDIO hanya untuk tombol pertama (c1)
     if (id === "c1") {
