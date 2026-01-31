@@ -1,6 +1,6 @@
 /* BODY / BACKGROUND MERAH DARAH */
 body {
-  font-family: 'Impact', 'Arial Black', sans-serif; /* font kasar */
+  font-family: 'Lucida Handwriting', cursive; /* font kasar */
   background: linear-gradient(180deg, #4a0000, #8b0000, #b30000);
   padding: 20px;
   color: #000;
@@ -39,7 +39,7 @@ h2 {
   padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
-  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-family: 'Lucida Handwriting', cursive;
   font-size: 16px;
   transition: 0.3s;
 }
