@@ -1,5 +1,5 @@
 // AUDIO SECTION 1
-let audioC1 = new Audio("opium.mp3.mp3"); // pastikan file ada di folder yang sama
+let audioC1 = new Audio("kota-ini.mp3"); // pastikan file ada di folder yang sama
 audioC1.loop = true;
 
 const toggleButtons = document.querySelectorAll(".toggleBtn");
@@ -16,9 +16,7 @@ toggleButtons.forEach(btn => {
       content.style.display = "none";
 
       // Hentikan audio hanya untuk c1
-      if (targetId === "c1") {
-        audioC1.pause();
-        audioC1.currentTime = 0;
+      
       }
 
     } else {
@@ -27,7 +25,7 @@ toggleButtons.forEach(btn => {
       // Play audio hanya untuk c1
       if (targetId === "c1") {
         audioC1.play().catch(err => console.log("Audio gagal play:", err));
-      }
+        
     }
   });
 });
