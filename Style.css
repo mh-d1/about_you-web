@@ -1,59 +1,59 @@
-/* BODY / BACKGROUND MERAH DARAH */
+
 body {
-  font-family: 'Georgia', serif; /* font kasar */
-  background: linear-gradient(180deg, #4a0000, #8b0000, #b30000);
+  font-family: 'Georgia', serif;
+  background: #F7DDE2; 
   padding: 20px;
   color: #000;
   margin: 0;
 }
 
-/* CONTAINER PUTIH KOTOR */
+
 .container {
   max-width: 700px;
   margin: auto;
-  background: #f2e7d8; /* putih kotor */
+  background: #FFFFF0; 
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
 }
 
-/* HEADINGS */
+
 h1 {
   text-align: center;
   font-size: 32px;
   margin-bottom: 20px;
   color: #000;
-  font-family: 'Georgi', serif ;
+  font-family: Georgia, serif;
 }
 
 h2 {
   margin-top: 25px;
   font-size: 22px;
   color: #000;
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
 }
 
-/* BUTTON COKLAT TUA */
+
 .toggleBtn {
-  background: #FAD4D8; /* coklat tua */
-  color: #fff;
+  background: #F7DDE2; 
+  color: #000;
   border: none;
   padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
-  font-family: 'Georgia',serif;
+  font-family: Georgia, serif;
   font-size: 16px;
   transition: 0.3s;
 }
 
 .toggleBtn:hover {
-  opacity: 0.7;
+  background: #FAD4D8; 
 }
 
-/* KONTEN TERTUTUP / PUTIH KUSAM */
+
 .content {
   display: none;
-  background: #FAD4D8; /* putih kusam */
+  background: #FAD4D8; 
   padding: 15px;
   margin-top: 10px;
   border-radius: 8px;
