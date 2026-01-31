@@ -16,7 +16,11 @@ toggleButtons.forEach(btn => {
       content.style.display = "none";
 
       // Hentikan audio hanya untuk c1
-      
+        if (targetId === "c1") {
+
+audioC1.pause();
+
+audioC1.currentTime = 0;
       }
 
     } else {
