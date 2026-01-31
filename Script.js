@@ -10,20 +10,22 @@ toggleButtons.forEach(btn => {
 
     if (!content) return;
 
-    // Toggle tampilan
+    // Jika sedang terlihat → sembunyikan
     if (content.style.display === "block") {
       content.style.display = "none";
 
-      // stop audio c1
+      // Hentikan audio khusus c1
       if (targetId === "c1") {
         audioC1.pause();
         audioC1.currentTime = 0;
       }
 
-    } else {
+    } 
+    // Jika sedang disembunyikan → tampilkan
+    else {
       content.style.display = "block";
 
-      // play audio c1
+      // Jalankan audio khusus c1
       if (targetId === "c1") {
         audioC1.play().catch(err => console.log("Audio gagal play:", err));
       }
